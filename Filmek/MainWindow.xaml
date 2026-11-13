@@ -1,0 +1,26 @@
+﻿<Window x:Class="Filmek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Filmek"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Filmek betöltése" Height="30" Margin="5" Click="betoltes"></Button>
+            <Button Content="Hány film van?" Height="30" Margin="5" Click="mennyi"></Button>
+            <Button Content="Leghosszabb film?" Height="30" Margin="5" Click="leghosszabb"></Button>
+            <Button Content="Átlag értékelés" Height="30" Margin="5" Click="atlagErtek"></Button>
+            <Button Content="Csak sci-fi" Height="30" Margin="5" Click="csakScifi"></Button>
+            <Button Content="Csak címe" Height="30" Margin="5" Click="csakCimek"></Button>
+            <Button Content="Rendezés cím szerint" Height="30" Margin="5" Click="rendezes"></Button>
+        </StackPanel>
+        <DataGrid x:Name="dgFilmek" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Column="1" IsReadOnly="True" AutoGenerateColumns="True"/>
+
+    </Grid>
+</Window>
