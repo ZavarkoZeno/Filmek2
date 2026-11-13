@@ -18,5 +18,13 @@ namespace Filmek
             Hossz = hossz;
             Ertekeles = ertekeles;
         }
+        public class FilmCim
+        {
+            public string Cim { get; set; }
+            public FilmCim(string cim)
+            {
+                Cim = cim;
+            }
+        }
     }
 }

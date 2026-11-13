@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Filmek.Film;
 
 namespace Filmek
 {
@@ -77,12 +78,13 @@ namespace Filmek
 
         private void csakCimek(object sender, RoutedEventArgs e)
         {
-            List<string> cimek = new List<string>();
+            List<FilmCim> cimek = new List<FilmCim>();
 
             foreach (Film f in filmek)
             {
-                cimek.Add(f.Cim);
+                cimek.Add(new FilmCim(f.Cim));
             }
+            dgFilmek.ItemsSource = null;
             dgFilmek.ItemsSource = cimek;
         }
 
